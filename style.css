@@ -1,0 +1,260 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Borel', cursive;
+font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #975add;
+    color:#fff;
+
+}
+.container{
+    width:100;
+    height:100vh;
+    padding:20px;
+    display:flex;
+    margin-top: 2%;
+    border-radius:10%;
+   position: sticky;
+
+}
+.left , .right{
+    flex-basis: 50%;
+    padding: 10px;
+   
+}
+
+textarea{
+    width:100%;
+    height: 28%;
+    background-color: #1f1f1f;
+    color:#975add;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 10px;
+}
+iframe{
+    width:100%;
+    height: 62%;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+}
+label i {
+    margin-right:10px;
+    margin-left:10px;
+}
+label{
+    display: flex;
+    align-items: center;
+    background-color:transparent;
+    height:30px;
+    border-radius: 10px;
+}
+
+.navbar{
+    display: flex;
+    width:200%;
+    background-color:white;
+    text-align: center;
+   
+}
+ .nav-item{
+    display: flex;
+    list-style:none;
+    text-decoration: none;
+    
+
+}
+li {
+    text-decoration: none;
+    color:black;
+    justify-content: space-between;
+}
+.nav-icon{
+    color:black;
+}
+a{
+    text-decoration: none;
+    justify-content: space-between;
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 1%;
+    display:flex;
+    padding:20px 100px;
+    justify-content:space-between;
+    align-items:center;
+    position: fixed;
+    background-color: transparent;
+    z-index: 200%;
+   
+   
+   }
+   header .logo{
+       color:white;
+       text-decoration: none;
+       font-size: 2em;
+       font-weight: 700;
+       transition: 0.5s;
+   }
+   header .logo span{
+       color:orange;
+       font-size: 1em;
+   }
+   header ul{
+       display:flex;
+       gap:40px;
+   }
+   header ul li{
+       list-style: none;
+   }
+   header ul li a{
+       text-decoration:none;
+       font-weight: 500;
+       font-size: 1.2em;
+       color:white;
+       transition:0.5s;
+    }
+    
+
+
+    body.Darkmode{
+        color: white;
+        background-color: black;
+        iframe{
+            background-color: #1f1f1f;
+        }
+
+    }
+   
+
+
+
+
+
+
+
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height:0 ;
+      }
+      
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color:  #975add;
+      }
+      
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+
+
+
+
+
+
+
+      .time{
+        margin-top: 30px;
+        margin-left: 30%;
+      }
+
+      .time .text{
+        position: relative;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Borel', cursive;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .time.text.first-text{
+       color: white;
+      }
+      .sec-text{
+        color:orange;
+        
+      }
+      text .sec-text:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #010718;
+        border-left: 2px solid #4070f4;
+        animation: animate 4s steps(12) infinite;
+      }
+      @keyframes animate{
+        40%, 60%{
+            left: 100%;
+        }
+        100%{
+            left: 0%;
+        }
+      }
+   
+
+
+
+
+
