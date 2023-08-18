@@ -1,92 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code editor</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Login System</title>
 </head>
 <body>
-     <header>
-    <a href="#" class="logo">HELLO <span><i class="fa-solid fa-code"></i></span> CODE</a>
-     <ul>
-        <li><a href="#" class="hov">HOME</a></li>
-         <li><a href="about.html" class="hov">ABOUT</a></li>
-         <li><a href="https://hellovictim0015.github.io/Chandanportfolio.github.io/" class="hov">PORTFOLIO</a></li>
-         <li><a href="https://github.com/Hellovictim0015" class="hov">GIT <i class="fa-brands fa-github"></i> HUB</a></li>
-         <li><a href="https://www.youtube.com/channel/UCC3B38ylkbxwvX3nsisKp-Q" class="hov are">YOU <i class="fa-brands fa-youtube"></i> TUBE</a></li>
-          <label class="switch">
-            <input id="Darkbtn" type="checkbox">
-            <span class="slider round"></span>
-          </label>
-
-
-     </ul>
-  </header>
-
-    <div class="container">
-        <div class="left">
-            <label><i class="fa-brands fa-html5"></i> HTML</label>
-            <textarea id="html-code" onkeyup="run()" placeholder="Write a html code </>"></textarea>
-
-            <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
-            <textarea id="cs-code"  onkeyup="run()" placeholder="Write a css code </>"></textarea>
-
-            <label><i class="fa-brands fa-js"></i> JAVASCRIPT</label>
-            <textarea id="js-code"  onkeyup="run()" placeholder="Write a javaScript code </>"></textarea>
-        </div>
-
-        <div class="right">
-            <label><i class="fa-solid fa-terminal"></i> Output</label>
-        <iframe id="output" ></iframe>
-        <div class="time">
-            <span class="text first-text">Write a code for:</span>
-            <span class="text sec-text"></span>
-        </div>
-        </div>
-      </div>
-      
-
-<script>
-    function run(){
-        let htmlcode = document.getElementById("html-code").value;
-        let csscode = document.getElementById("cs-code").value;
-        let jscode  = document.getElementById("js-code").value;
-        let output = document.getElementById("output");
-
-        output.contentDocument.body.innerHTML = htmlcode+"<style>"+csscode+"</style>";
-        output.contentWindow.eval(jscode);
+    <div class="main-div">
+        <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username" required><br><br>
         
-    }
-    var button = document.getElementById("Darkbtn");
-        Darkbtn.addEventListener("click", ()=>{
-            document.body.classList.toggle("Darkmode");
-           
-        })
-
-
-        const text = document.querySelector(".sec-text");
-        const textLoad = () =>{
-            setTimeout(()=>{
-                text.textContent ="HTML";
-            },0);
-            setTimeout(()=>{
-                text.textContent = "JAVA";
-            },4000);
-            setTimeout(()=>{
-                text.textContent = "PYTHON";
-            },8000);
-            setTimeout(()=>{
-                text.textContent = "C++";
-            },12000);
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required><br><br>
+        
+        <button type="submit">Login</button><br>
+        <a  id="showbtn"> show username and password <span class="new-span">click Now</span></a>
+    </form>
+    </div>
+    <div id="showcode" style="display: none;">
+        <p>
+            Note: <span class="local">Username : chandan  and Password: hello</span>
+        </p>
+    </div>
+    <style>
+        .new-span{
+            color:red;
         }
-        textLoad();
-        setInterval(textLoad, 12000);
+
+        a{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        p{
+            background-color: whitesmoke;
+            width: 25%;
+            text-align: center;
+            margin-left: 35%;
+            margin-top:10%;
+            color: red;
+        }
+        .local{
+            color: chartreuse;
+        }
+        body{
+            background-color:#975add;
+        }
+        .main-div{
+            background-color:white;
+            width: 30%;
+            height: 200px;
+            text-align: center;
+           border-radius: 30px;
+          margin-top: 10%;
+          margin-left: 35%;
+        }
+        form{
+            justify-content: center;
+        }
+        input{
+             border-radius: 5px;
+             border-style: none;
+            height: 25px;
+        }
+        button{
+            width: 15%;
+            height: 25px;
+            border-radius: 10px;
+            border-style: none;
+        }
        
-</script>
+    </style>
+    
+    <script>
+
+      const showbtn = document.getElementById("showbtn");
+      const showcode = document.getElementById("showcode");
+      showbtn.addEventListener("click" , () =>{
+        if(showcode.style.display === "none"){
+            showcode.style.display="block";
+        }
+        else{
+            showcode.style.display="none"
+        }
+      });
+
+
+
+        const users = [
+            { username: "chandan", password: "hello" },
+            { username: "user2", password: "password2" }
+            // Add more users as needed
+        ];
+
+        const loginForm = document.getElementById("loginForm");
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById("username");
+            const passwordInput = document.getElementById("password");
+
+            const enteredUsername = usernameInput.value;
+            const enteredPassword = passwordInput.value;
+
+            const user = users.find(u => u.username === enteredUsername && u.password === enteredPassword);
+
+            if (user) {
+                window.location.href = "code.html";
+                alertr("this is you home page");
+
+                // You can redirect or perform other actions here after successful login
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+            
+            // Clear the form
+            usernameInput.value = "";
+            passwordInput.value = "";
+        });
+    </script>
 </body>
 </html>
