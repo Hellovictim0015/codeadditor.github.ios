@@ -5,70 +5,84 @@
 </head>
 <body>
     <div class="main-div">
-        <h1>Login</h1>
+        
     <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter Username" required><br><br>
+        <h1>Login</h1>
+     <P>username</P>
+      <div class="int">        
+        <input type="text" id="username" name="username" placeholder="Enter Username" required/>
+      </div>   
         
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter Password" required><br><br>
+      <P for="password">Password:</P>
+       <div class="int"> <input type="password" id="password" name="password" placeholder="Enter Password" required></div>
         
-        <button type="submit">Login</button><br>
+        <div class="btn"><button type="submit">Login</button></div>
+        <br>
         <a  id="showbtn"> show username and password <span class="new-span">click Now</span></a>
+        <div id="showcode" style="display: none;">
+            <p>
+                Note: <span class="local">Username : chandan  and Password: hello</span>
+            </p>
+        </div>
     </form>
     </div>
-    <div id="showcode" style="display: none;">
-        <p>
-            Note: <span class="local">Username : chandan  and Password: hello</span>
-        </p>
-    </div>
+   
     <style>
-        .new-span{
-            color:red;
-        }
-
-        a{
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        p{
-            background-color: whitesmoke;
-            width: 25%;
-            text-align: center;
-            margin-left: 35%;
-            margin-top:10%;
-            color: red;
-        }
-        .local{
-            color: chartreuse;
-        }
         body{
-            background-color:#975add;
+            background-color: blueviolet;
+            
         }
         .main-div{
-            background-color:white;
-            width: 30%;
-            height: 200px;
-            text-align: center;
-           border-radius: 30px;
-          margin-top: 10%;
-          margin-left: 35%;
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+            
+            
         }
-        form{
+        #loginForm{
+         background-color: white;
+         padding: 15px;
+         border-radius: 4px;
+         box-shadow:1px 3px 20px 1px black;
+
+         
+        }
+        h1{
+            display: flex;
+            align-items: center;
             justify-content: center;
         }
+        .btn{
+          display: flex;
+          justify-content: center;
+          margin-top: 10px;
+        }
+        .btn button{
+          width: 14rem;
+          height: 4vh;
+          border-radius: 3px;
+          border-style: none;
+          background-color: yellow;
+          box-shadow:1px 1px 5px 1px rgb(196, 194, 194);
+
+        }
         input{
-             border-radius: 5px;
-             border-style: none;
-            height: 25px;
-        }
-        button{
-            width: 15%;
-            height: 25px;
-            border-radius: 10px;
+            width: 17rem;
+            height: 4.5vh;
+            border-radius: 3px;
             border-style: none;
+            box-shadow:1px 1px 5px 1px rgb(196, 194, 194);
+        
+            
         }
-       
+        .int{
+           display: flex;
+           justify-content: center;
+        }
+        input :placeholder-shown::{
+
+        }
+        
     </style>
     
     <script>
