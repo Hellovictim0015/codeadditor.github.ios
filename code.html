@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>codeditor</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Borel&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-     <header>
-    <a href="#" class="logo">HELLO <span><i class="fa-solid fa-code"></i></span> CODE</a>
+     <header class="he">
+     <div class="he">  <a href="#" class="logo">HELLO <span><i class="fa-solid fa-code"></i></span> CODE</a></div>
      <ul>
         <li><a href="#" class="hov">HOME</a></li>
          <li><a href="about.html" class="hov">ABOUT</a></li>
@@ -41,15 +40,138 @@
         </div>
 
         <div class="right">
-            <label><i class="fa-solid fa-terminal"></i> Output</label>
-        <iframe id="output" ></iframe>
+            <label style="color: white;"><i class="fa-solid fa-terminal"></i> Output</label>
+            <iframe id="output" ></iframe>
         <div class="time">
             <span class="text first-text">Write a code for:</span>
             <span class="text sec-text"></span>
         </div>
         </div>
       </div>
-      
+      <style>
+        body{
+            background-color:blueviolet;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        
+        }
+        header ul{
+            display: flex;
+            gap: 20px;
+        }
+        header ul li{
+            list-style: none;
+            color: white;
+
+            
+        }
+        header ul li a{
+            color: white;
+            text-decoration: none;
+            
+        }
+        header .he a{
+            color: white;
+            text-decoration:none;
+            font-size: 1.3rem;
+        }
+        header .he span{
+            color:orange;
+            font-size: 1.4rem;
+        }
+        .container{
+            display: flex;
+            padding-left: 10px;
+            padding-right: 10px;
+            gap: 30px;
+            
+        }
+        .left{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .left textarea{
+           width: 800px;
+           height:22vh;
+           background-color: black;
+           color: white;
+           border-radius: 7px;
+        }
+        .left label{
+            color: white;
+        }
+        .right{
+            margin-top: 22px;
+            
+        }
+        .right iframe{
+            background-color: white;
+            width: 40rem;
+            height: 52vh;
+            border-radius: 7px;
+        }
+        .rigth label{
+            margin-top: 80px;
+        }
+        .time{
+            margin-top: 70px;
+            margin-left: 100px;
+            color: white;
+            font-size: 3rem;
+        }
+        .time .sec-text{
+            color: orange;
+        }
+        @media screen and (max-width: 830px) {
+            .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            
+        }
+        .left textarea{
+           width: 400px;
+           height:22vh;
+           background-color: black;
+           color: white;
+           border-radius: 7px;
+        }
+        .right iframe{
+            background-color: white;
+            width: 20rem;
+            height: 52vh;
+            
+        }
+        header ul{
+            display: none;
+            gap: 20px;
+        }
+        
+        
+        }
+        @media screen and (max-width: 1176px) {
+            .right iframe{
+            background-color: white;
+            width: 31rem;
+            height: 52vh;
+            border-radius: 7px;
+        }
+        .left textarea{
+           width: 600px;
+           height:22vh;
+           background-color: black;
+           color: white;
+           border-radius: 7px;
+        }
+        }
+      </style>
 
 <script>
     function run(){
